@@ -16,10 +16,12 @@
     ],
     "category": "电脑游戏 · 高评分…",
     "tags": [
-      "推荐"
+      "推荐",
+      "最新"
     ],
     "status": "更新",
-    "views": 18540
+    "statusColor": "#22c55e",
+    "views": 19876
   },
   {
     "id": "meide",
@@ -41,6 +43,7 @@
       "最新"
     ],
     "status": "更新",
+    "statusColor": "#16a34a",
     "views": 86
   },
   {
@@ -59,8 +62,11 @@
       "https://picsum.photos/seed/hades4/1280/720"
     ],
     "category": "电脑游戏 · 高评分…",
-    "tags": [],
+    "tags": [
+      "推荐"
+    ],
     "status": "",
+    "statusColor": "#64748b",
     "views": 22340
   }
 ]
