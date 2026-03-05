@@ -9,12 +9,36 @@
 <body>
 <header class="header">
   <div class="container nav">
-    <div class="brand"><span class="logo"></span><span>GameHub 目录</span></div>
-    <nav class="menu"></nav>
+    <div class="brand" style="gap:12px">
+      <span class="logo"></span>
+      <div class="search">
+        <span class="icon">🔎</span>
+        <input id="q" type="search" placeholder="搜索名称…" />
+      </div>
+    </div>
+    <div class="actions">
+      <button id="themeToggle" class="toggle" aria-label="切换主题">🌙 夜间</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="filters">
+      <button class="chip active" data-filter="all">全部</button>
+      <button class="chip" data-filter="推荐">推荐</button>
+      <button class="chip" data-filter="最新">最新</button>
+      <div class="sort">
+        <label for="sortSel" style="margin-right:6px;color:var(--muted);font-size:13px">排序：</label>
+        <select id="sortSel">
+          <option value="default">默认</option>
+          <option value="date">日期（新→旧）</option>
+          <option value="views">浏览量（高→低）</option>
+        </select>
+      </div>
+    </div>
   </div>
 </header>
 <main class="container">
   <section id="grid" class="grid"></section>
+  <div id="empty" class="empty" style="display:none">没有匹配的结果</div>
 </main>
 <footer class="footer">
   <div class="container">
