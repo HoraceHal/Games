@@ -1,27 +1,32 @@
 [
   {
     "id": "nioh",
-    "title": "仁王 Nioh 完整版",
-    "platform": "PC / 单机",
-    "cover": "https://picsum.photos/seed/nioh/800/450",
+    "title": "特工17 Agent17",
+    "platform": "安卓 / 单机",
+    "cover": "./images/covers/Agent17.png"",
     "size": "68.3 GB",
-    "version": "v1.24.05 豪华整合版",
+    "version": "v0.26.10 最新版",
     "date": "2026-03-01",
-    "desc": "硬核动作角色扮演，战国妖怪题材，包含全部DLC与高清材质包。",
+    "desc": "某年某月某日，你在车祸现场捡到了一部手机。
+当你打算卖掉它赚点零花钱的时候，突然接到了一个电话。
+对方自称代号17号，是一位特工，几乎无所不能。
+但是貌似脑袋不太灵光，把你认作她的顶头上司。
+那么你会让他做些什么呢，教训欺负你的小太妹？
+调查你女神的真.相？或者别的什么？。",
     "shots": [
-      "https://picsum.photos/seed/nioh1/1280/720",
-      "https://picsum.photos/seed/nioh2/1280/720",
-      "https://picsum.photos/seed/nioh3/1280/720",
-      "https://picsum.photos/seed/nioh4/1280/720"
+      "./images/shots/Agent17/Agent1701.png",
+      "./images/shots/Agent17/Agent1702.png",
+      "./images/shots/Agent17/Agent1703.png",
+      "./images/shots/Agent17/Agent1704.png"
     ],
-    "category": "电脑游戏 · 高评分…",
+    "category": "安卓游戏 · 高评分…",
     "tags": [
       "推荐",
       "最新"
     ],
     "status": "更新",
     "statusColor": "#22c55e",
-    "views": 19876
+    "views": 98
   },
   {
     "id": "meide",
@@ -33,10 +38,10 @@
     "date": "2026-02-05",
     "desc": "游戏的制作是相当的精致，3D建模CG+2D纯手绘的UI和人物立绘。\n游戏风格属于亚洲日式风格，非常符合我们的审美！\n还有动态CG场景，非常给力！人设风骚，剧情真心爽的飞起~",
     "shots": [
-      "./images/shots/mygame-01.png",
-      "./images/shots/mygame-02.png",
-      "./images/shots/mygame-03.png",
-      "./images/shots/mygame-04.png"
+      "./images/shots/meide/mygame-01.png",
+      "./images/shots/meide/mygame-02.png",
+      "./images/shots/meide/mygame-03.png",
+      "./images/shots/meide/mygame-04.png"
     ],
     "category": "安卓游戏 · 高评分…",
     "tags": [
