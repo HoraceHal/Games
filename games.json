@@ -47,26 +47,26 @@
     "views": 86
   },
   {
-    "id": "hades",
-    "title": "Hades 黑帝斯",
+    "id": "nzbo",
+    "title": "【精品SLG】隔壁的女主播 首发正式版 [官中/3D/全动态/步兵] ",
     "platform": "PC / 中文",
-    "cover": "https://picsum.photos/seed/hades/800/450",
-    "size": "14.7 GB",
-    "version": "v1.38220",
-    "date": "2025-04-28",
-    "desc": "爽快Roguelike地牢闯关，手感与音乐拉满。",
+    "cover": "./images/covers/nzbo.png",
+    "size": "20 GB",
+    "version": "v1.05",
+    "date": "2025-12-28",
+    "desc": "Female Anchor Next Door 这款游戏是一款融合日常与奇幻元素的互动视觉小说，玩家将扮演一位普通上班族，在平淡生活中邂逅各种充满魅力的女性角色。/n从现实的职场到超现实的魔法世界，每一次相遇都带来意想不到的冒险与心动。/n你的选择将决定故事走向，解锁多样化的剧情与结局。",
     "shots": [
-      "https://picsum.photos/seed/hades1/1280/720",
-      "https://picsum.photos/seed/hades2/1280/720",
-      "https://picsum.photos/seed/hades3/1280/720",
-      "https://picsum.photos/seed/hades4/1280/720"
+      "./images/shots/nzbo/nzbo01.png",
+      "./images/shots/nzbo/nzbo02.png"",
+      "./images/shots/nzbo/nzbo03.png"",
+      "./images/shots/nzbo/nzbo04.png""
     ],
     "category": "电脑游戏 · 高评分…",
     "tags": [
       "推荐"
     ],
-    "status": "",
+    "status": "更新",
     "statusColor": "#64748b",
-    "views": 22340
+    "views": 102
   }
 ]
