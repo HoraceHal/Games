@@ -43,3 +43,134 @@ body.theme-light{--bg:#f3f4f6;--card:#ffffff;--text:#111;--muted:#5f6368;--accen
 .empty{opacity:.7;text-align:center;padding:28px 0}
 .back a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:var(--chip-on);color:var(--text);border:1px solid var(--line);padding:8px 12px;border-radius:10px}
 .back a:hover{filter:brightness(1.05)}
+/* =========================
+   Mobile Polish Patch (≤768px)
+   将本段追加到 style.css 的末尾
+   ========================= */
+@media (max-width: 768px) {
+
+  /* 1) 全局排版与留白：小屏左右留出安全内边距，字号/间距整体更轻盈 */
+  .container {
+    width: 100% !important;
+    padding: 0 16px !important;           /* 统一左右内边距 */
+  }
+  body {
+    -webkit-tap-highlight-color: transparent; /* 去除 iOS 点击高亮 */
+  }
+
+  /* 2) 顶部区域：精简头部，减少占高；搜索建议在首页使用，这里隐藏 */
+  .nav { padding: 10px 0 !important; gap: 8px !important; }
+  .search { display: none !important; }   /* 详情页不建议显示搜索（在首页搜更自然） */
+  .breadcrumb { font-size: 12px !important; margin: 8px 0 !important; color: var(--muted); }
+
+  /* 3) 标题层级：移动端标题不过度占位，阅读更顺畅 */
+  h1, .game-title, #title {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    margin: 8px 0 10px !important;
+    word-break: break-word;               /* 标题中英文混排不挤压 */
+  }
+
+  /* 4) 详情主体：两栏 → 单列；信息按“要点优先”的顺序垂直排列 */
+  .columns {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .section {
+    padding: 12px !important;
+    border-radius: 12px !important;
+  }
+
+  /* 5) 封面区域：保持 16:9 比例，自适应高度，避免固定 320px 的压迫 */
+  .hero { height: auto !important; border-bottom: none !important; }
+  .hero img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* 6) 信息表（右栏）移动端卡片化：更易读，不挤压 */
+  .table { width: 100%; border-collapse: collapse; }
+  .table tr {
+    display: flex; justify-content: space-between;
+    padding: 10px 0; border-bottom: 1px solid var(--line);
+  }
+  .table tr:last-child { border-bottom: none; }
+  .table th, .table td {
+    border: none !important; padding: 0 !important; font-size: 14px;
+  }
+  .table th { color: var(--muted); width: auto !important; }
+
+  /* 7) 图文内容区：卡片标题行/标签的垂直节奏更紧凑 */
+  .content { gap: 8px !important; min-height: auto !important; }
+  .title-row { gap: 6px !important; }
+  .label { padding: 2px 6px !important; border-radius: 6px !important; font-size: 12px !important; }
+
+  /* 8) 截图画廊：横向滑动，更贴近原生 App 体验，节省纵向空间 */
+  .gallery {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 10px !important;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 4px;                 /* 给滚动条留一点空间 */
+  }
+  .gallery img {
+    width: 72vw !important;              /* 单张视口 7 成宽度 */
+    height: auto !important;
+    aspect-ratio: 16/9;
+    border-radius: 10px !important;
+    flex: 0 0 auto;                       /* 不被压缩 */
+    scroll-snap-align: start;
+  }
+
+  /* 9) 卡片在手机上的视觉还原：阴影/浮起力度略收，圆角保持 */
+  .card {
+    transform: none !important;
+    transition: transform .2s ease, box-shadow .2s ease;
+    box-shadow: var(--shadow);
+    border-radius: 16px !important;
+  }
+  .card:hover { transform: translateY(-4px) scale(1.01); box-shadow: var(--hover-shadow); }
+  .thumb img { height: auto !important; aspect-ratio: 16/9; }  /* 卡片缩略图也按比例 */
+
+  /* 10) 底部信息行：图标/日期/浏览量在同一视觉节奏 */
+  .bottom { font-size: 13px !important; padding: 0 10px 12px !important; }
+  .bottom .left, .bottom .right { gap: 6px !important; }
+
+  /* 11) 返回首页按钮：大号、易触达；悬浮到底部中间（可选） */
+  .back a {
+    min-height: 44px;
+    padding: 10px 18px !important;
+    border-radius: 24px !important;
+    background: var(--accent) !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  }
+  /* 如需固定悬浮，请取消下行注释
+  .back a {
+    position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    z-index: 20;
+  } */
+
+  /* 12) 页脚：移动端对齐与色彩对比更清晰 */
+  .footer { padding: 18px 0 26px !important; }
+  .footer .wx { padding: 8px 12px !important; border-radius: 10px !important; }
+
+  /* 13) 列表页（若有）：每行 2 列，点按区更“宽松” */
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; }
+}
+
+/* =========================
+   Ultra-small devices (≤360px)
+   微小屏进一步收紧元素
+   ========================= */
+@media (max-width: 360px) {
+  h1, .game-title, #title { font-size: 20px !important; }
+  .grid { grid-template-columns: 1fr !important; } /* 一列，最大化可读性 */
+  .gallery img { width: 86vw !important; }          /* 单张更大，便于查看 */
+}
