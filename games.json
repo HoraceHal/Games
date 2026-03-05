@@ -12,35 +12,44 @@
       "https://picsum.photos/seed/nioh1/1280/720",
       "https://picsum.photos/seed/nioh2/1280/720",
       "https://picsum.photos/seed/nioh3/1280/720",
-      "https://picsum.photos/seed/nioh4/1280/720"
+      "https://picsum.photos/seed/nioh4/1280/720",
+      "https://picsum.photos/seed/nioh5/1280/720",
+      "https://picsum.photos/seed/nioh6/1280/720"
     ],
     "category": "电脑游戏 · 高评分…",
     "tags": [
-      "推荐"
+      "推荐",
+      "最新"
     ],
     "status": "更新",
-    "views": 18540
+    "statusColor": "#22c55e",
+    "views": 19876
   },
   {
-  "id": "meide",
-  "title": "V.I.R.T.U.E.S. 美德 V1-17 全章节完结精翻汉化版",
-  "platform": "安卓 / 中文",
-  "cover": "./images/covers/mygame.png",
-  "size": "2 GB",
-  "version": "国风神作SLG/中文/动态",
-  "date": "2026-02-05",
-  "desc": "游戏的制作是相当的精致，3D建模CG+2D纯手绘的UI和人物立绘。\n游戏风格属于亚洲日式风格，非常符合我们的审美！\n还有动态CG场景，非常给力！人设风骚，剧情真心爽的飞起~",
-  "shots": [
-    "./images/shots/mygame-01.png",
-    "./images/shots/mygame-02.png",
-    "./images/shots/mygame-03.png",
-    "./images/shots/mygame-04.png"
-  ],
-  "category": "安卓游戏 · 高评分…",
-  "tags": ["最新"],
-  "status": "更新",
-  "views": 86
-},
+    "id": "meide",
+    "title": "V.I.R.T.U.E.S. 美德 V1-17 全章节完结精翻汉化版",
+    "platform": "安卓 / 中文",
+    "cover": "https://picsum.photos/seed/meide/800/450",
+    "size": "2 GB",
+    "version": "国风神作SLG/中文/动态",
+    "date": "2026-02-05",
+    "desc": "游戏的制作是相当的精致，3D建模CG+2D纯手绘的UI和人物立绘。\n游戏风格属于亚洲日式风格，非常符合我们的审美！\n还有动态CG场景，非常给力！人设风骚，剧情真心爽的飞起~",
+    "shots": [
+      "https://picsum.photos/seed/meide1/1280/720",
+      "https://picsum.photos/seed/meide2/1280/720",
+      "https://picsum.photos/seed/meide3/1280/720",
+      "https://picsum.photos/seed/meide4/1280/720",
+      "https://picsum.photos/seed/meide5/1280/720",
+      "https://picsum.photos/seed/meide6/1280/720"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": [
+      "最新"
+    ],
+    "status": "更新",
+    "statusColor": "#16a34a",
+    "views": 86
+  },
   {
     "id": "hades",
     "title": "Hades 黑帝斯",
@@ -54,11 +63,16 @@
       "https://picsum.photos/seed/hades1/1280/720",
       "https://picsum.photos/seed/hades2/1280/720",
       "https://picsum.photos/seed/hades3/1280/720",
-      "https://picsum.photos/seed/hades4/1280/720"
+      "https://picsum.photos/seed/hades4/1280/720",
+      "https://picsum.photos/seed/hades5/1280/720",
+      "https://picsum.photos/seed/hades6/1280/720"
     ],
     "category": "电脑游戏 · 高评分…",
-    "tags": [],
+    "tags": [
+      "推荐"
+    ],
     "status": "",
+    "statusColor": "#64748b",
     "views": 22340
   }
 ]
