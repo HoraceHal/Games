@@ -12,18 +12,14 @@
       "https://picsum.photos/seed/nioh1/1280/720",
       "https://picsum.photos/seed/nioh2/1280/720",
       "https://picsum.photos/seed/nioh3/1280/720",
-      "https://picsum.photos/seed/nioh4/1280/720",
-      "https://picsum.photos/seed/nioh5/1280/720",
-      "https://picsum.photos/seed/nioh6/1280/720"
+      "https://picsum.photos/seed/nioh4/1280/720"
     ],
     "category": "电脑游戏 · 高评分…",
     "tags": [
-      "推荐",
-      "最新"
+      "推荐"
     ],
     "status": "更新",
-    "statusColor": "#22c55e",
-    "views": 19876
+    "views": 18540
   },
   {
     "id": "meide",
@@ -38,16 +34,13 @@
       "https://picsum.photos/seed/meide1/1280/720",
       "https://picsum.photos/seed/meide2/1280/720",
       "https://picsum.photos/seed/meide3/1280/720",
-      "https://picsum.photos/seed/meide4/1280/720",
-      "https://picsum.photos/seed/meide5/1280/720",
-      "https://picsum.photos/seed/meide6/1280/720"
+      "https://picsum.photos/seed/meide4/1280/720"
     ],
     "category": "安卓游戏 · 高评分…",
     "tags": [
       "最新"
     ],
     "status": "更新",
-    "statusColor": "#16a34a",
     "views": 86
   },
   {
@@ -63,16 +56,11 @@
       "https://picsum.photos/seed/hades1/1280/720",
       "https://picsum.photos/seed/hades2/1280/720",
       "https://picsum.photos/seed/hades3/1280/720",
-      "https://picsum.photos/seed/hades4/1280/720",
-      "https://picsum.photos/seed/hades5/1280/720",
-      "https://picsum.photos/seed/hades6/1280/720"
+      "https://picsum.photos/seed/hades4/1280/720"
     ],
     "category": "电脑游戏 · 高评分…",
-    "tags": [
-      "推荐"
-    ],
+    "tags": [],
     "status": "",
-    "statusColor": "#64748b",
     "views": 22340
   }
 ]
