@@ -1,0 +1,38 @@
+[
+  {
+    "id": "nioh",
+    "title": "仁王 Nioh 完整版",
+    "platform": "PC / 单机",
+    "cover": "https://picsum.photos/seed/nioh/600/350",
+    "size": "68.3 GB",
+    "version": "v1.24.05 豪华整合版",
+    "date": "2026-03-01",
+    "desc": "硬核动作角色扮演，战国妖怪题材，包含全部DLC与高清材质包。",
+    "shots": [
+      "https://picsum.photos/seed/nioh1/1280/720",
+      "https://picsum.photos/seed/nioh2/1280/720",
+      "https://picsum.photos/seed/nioh3/1280/720",
+      "https://picsum.photos/seed/nioh4/1280/720",
+      "https://picsum.photos/seed/nioh5/1280/720",
+      "https://picsum.photos/seed/nioh6/1280/720"
+    ]
+  },
+  {
+    "id": "codevein",
+    "title": "噬神者 Build 22190805",
+    "platform": "PC / 中文",
+    "cover": "https://picsum.photos/seed/codevein/600/350",
+    "size": "37.9 GB",
+    "version": "Build 22190805 + DLC",
+    "date": "2026-02-12",
+    "desc": "末世风格动作RPG，队友协同作战，多武器风格可切换。",
+    "shots": [
+      "https://picsum.photos/seed/codevein1/1280/720",
+      "https://picsum.photos/seed/codevein2/1280/720",
+      "https://picsum.photos/seed/codevein3/1280/720",
+      "https://picsum.photos/seed/codevein4/1280/720",
+      "https://picsum.photos/seed/codevein5/1280/720",
+      "https://picsum.photos/seed/codevein6/1280/720"
+    ]
+  }
+]
