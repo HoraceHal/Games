@@ -145,3 +145,78 @@ body.theme-light{--bg:#f3f4f6;--card:#ffffff;--text:#111;--muted:#5f6368;--accen
    通用防护：图片与媒体不超宽
    ========================= */
 img, video { max-width: 100%; height: auto; display: block; }
+/* =========================
+   Patch: 颜色统一 + 标题省略 + 品牌文案外观
+   直接追加到 style.css 末尾
+   ========================= */
+
+/* 0) 定义统一“更新”绿色（同右侧卡片的小绿） */
+:root {
+  --status-green: #22c55e;            /* 统一的更新绿 */
+}
+/* 浅色主题下也沿用同一绿，保持一致 */
+body.theme-light {
+  --status-green: #22c55e;
+}
+
+/* 1) 统一“更新”标签颜色（标题左侧的小绿牌 & 任何用到的更新绿） */
+.label {
+  background: var(--status-green) !important;
+  border-color: var(--status-green) !important;
+  color: #fff !important;
+}
+.badge-new {
+  /* “新”角标维持你之前的风格；如需同色可解开下一行 */
+  /* background: var(--status-green) !important; */
+}
+
+/* 2) 手机端卡片标题：保持“之前方案”——长就省略（1 行） */
+@media (max-width: 768px) {
+  .title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1 !important;  /* 仅 1 行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;                /* 兼容换行省略模型 */
+  }
+}
+
+/* 如果你希望桌面端仍然两行、省略，可保留下面这段（可选） */
+@media (min-width: 769px) {
+  .title {
+    -webkit-line-clamp: 2 !important;  /* 桌面 2 行 */
+  }
+}
+
+/* 3) 品牌文案“Games 目录”：圆角胶囊 + 干净对齐 */
+.brand {
+  gap: 10px;                            /* 保持与 logo 的合理距离 */
+}
+.brand-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;                 /* 圆角胶囊 */
+  background: linear-gradient(135deg, #f3f4f6 0%, #e9eef8 100%);
+  color: #111;
+  font-weight: 700;
+  letter-spacing: .2px;
+  font-size: 14px;
+  border: 1px solid rgba(0,0,0,.06);
+  line-height: 1;
+}
+body.theme-dark .brand-name {
+  background: linear-gradient(135deg, #1b1c20 0%, #22252b 100%);
+  color: #e8e8e8;
+  border-color: #2a2d33;
+}
+
+/* 微调品牌在超小屏的占位（不挤压右侧按钮） */
+@media (max-width: 360px) {
+  .brand-name {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+}
