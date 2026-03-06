@@ -5,10 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>游戏详情</title>
-  <!-- 保留你原有的全局样式文件 -->
   <link rel="stylesheet" href="./css/style.css" />
-  <!-- 本次覆盖新增：仅用于详情页的横滑图库与布局微调 -->
-  <link rel="stylesheet" href="./css/detail-extra.css" />
+  <link rel="stylesheet" href="./css/detail-leftgallery.css" />
 </head>
 <body>
 <header class="header">
@@ -18,7 +16,7 @@
       <span class="brand-name">Games 目录</span>
     </div>
     <div class="actions">
-      <button id="themeToggle" class="toggle" aria-label="切换主题">🌙 夜间</button>
+      <button id="themeToggle" class="toggle" aria-label="切换主题">夜间</button>
     </div>
   </div>
 </header>
@@ -30,14 +28,18 @@
 
   <div class="container">
     <div class="columns">
-      <!-- 左列：只放封面，大图沉浸 -->
+      <!-- 左列：封面 + 横向截图（回到你之前的布局思路） -->
       <section class="section" id="leftCol">
         <div class="hero" style="position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--line)">
           <img id="hero" alt="封面" style="width:100%;height:auto;object-fit:cover;aspect-ratio:16/9"/>
         </div>
+
+        <h3 style="margin:16px 0 8px">游戏截图</h3>
+        <div id="gallery" class="gallery"></div>
+        <div class="back" style="margin-top:12px"><a class="toggle" href="index.html">← 返回首页</a></div>
       </section>
 
-      <!-- 右列：版本信息 + 游戏简介（阅读区） -->
+      <!-- 右列：版本信息 + 游戏简介 -->
       <aside class="section" id="rightCol">
         <h3 style="margin:0 0 8px">版本信息</h3>
         <table class="table" style="width:100%;border-collapse:collapse">
@@ -52,15 +54,6 @@
         <p id="desc" class="desc-body"></p>
       </aside>
     </div>
-  </div>
-
-  <!-- 下方整行：横向滑动截图画廊 -->
-  <div class="container">
-    <section class="section" style="margin-top:16px">
-      <h3 style="margin:0 0 8px">游戏截图</h3>
-      <div id="gallery" class="gallery"></div>
-      <div class="back" style="margin-top:12px"><a class="toggle" href="index.html">← 返回首页</a></div>
-    </section>
   </div>
 </main>
 <footer class="footer"><div class="container"><div><strong>声明：</strong>本页仅展示游戏信息与截图，不提供下载与任何交易。</div><div class="wx">如需获取资源，请添加微信：<strong>lyz7595</strong></div></div></footer>

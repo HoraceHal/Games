@@ -1,7 +1,6 @@
 
 (function(){
   const q = k => new URL(location.href).searchParams.get(k);
-
   function saveTheme(t){ localStorage.setItem('theme', t); }
   function loadTheme(){ return localStorage.getItem('theme') || 'dark'; }
   function applyTheme(){
@@ -43,7 +42,7 @@
         `<img src="${u}" alt="截图${i+1}" loading="lazy" onerror="this.onerror=null;this.src='${fallbackShot}'"/>`
       ).join('');
 
-      // 交互增强：滚轮横向 + 鼠标拖拽 + 触摸滑动
+      // 滚轮上下 -> 横向（Shift 时保持默认）
       gal.addEventListener('wheel', (e) => {
         if (e.shiftKey) return;
         if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
@@ -52,6 +51,7 @@
         }
       }, { passive: false });
 
+      // 鼠标拖拽
       let isDown=false, startX=0, scrollLeft=0;
       gal.addEventListener('mousedown', (e)=>{
         isDown=true; gal.classList.add('grabbing');
@@ -67,6 +67,7 @@
         gal.scrollLeft = scrollLeft - walk;
       });
 
+      // 触摸滑动
       let touchStartX=0, touchScrollLeft=0;
       gal.addEventListener('touchstart', (e)=>{
         const t=e.touches[0]; touchStartX=t.clientX; touchScrollLeft=gal.scrollLeft;

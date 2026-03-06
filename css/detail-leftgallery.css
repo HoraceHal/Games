@@ -1,0 +1,25 @@
+
+/* =============== 详情页（左列：封面+截图；右列：版本+简介） =============== */
+.columns{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
+@media (max-width: 991px){.columns{grid-template-columns:1fr}}
+
+/* 右列粘性（桌面） */
+@media (min-width: 992px){#rightCol{position:sticky;top:16px;align-self:start}}
+
+/* 表格 */
+.table th,.table td{border-bottom:1px solid var(--line);padding:10px 6px;text-align:left}
+.table tr:last-child th,.table tr:last-child td{border-bottom:none}
+.table th{color:var(--muted);width:120px}
+
+/* 简介可读性 */
+.desc-body{white-space:pre-line;color:var(--text);opacity:.9;line-height:1.75}
+
+/* 横向截图画廊：可拖拽、触摸滑动、滚轮横向 */
+.gallery{display:flex;overflow-x:auto;gap:12px;padding:6px 0 10px;scroll-snap-type:x mandatory;scrollbar-width:thin;cursor:grab}
+.gallery.grabbing{cursor:grabbing}
+.gallery::-webkit-scrollbar{height:6px}
+.gallery::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.gallery img{flex:0 0 auto;width:72vw;max-width:420px;border-radius:12px;scroll-snap-align:center;object-fit:cover}
+
+/* 兜底圆角 */
+.hero img{border-radius:14px}
