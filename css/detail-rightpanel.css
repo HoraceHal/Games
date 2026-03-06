@@ -1,0 +1,43 @@
+
+/* ================= 详情页（左更宽 / 右更窄；右侧淡蒙版面板） ================= */
+
+/* 左 7 / 右 2 */
+.columns{display:grid;grid-template-columns:7fr 2fr;gap:24px}
+@media (max-width: 991px){.columns{grid-template-columns:1fr}}
+
+/* 左侧封面容器 */
+.hero-box{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--line);background:var(--card)}
+.hero-box img{display:block;width:100%;height:auto;object-fit:cover;aspect-ratio:16/9}
+
+/* 右侧粘性（桌面） */
+@media (min-width:992px){#rightCol{position:sticky;top:16px;align-self:start}}
+
+/* 淡蒙版圆角卡片 */
+.panel{border-radius:14px;padding:16px;border:1px solid rgba(0,0,0,.22);background:rgba(255,255,255,.04);backdrop-filter:saturate(120%) blur(10px);-webkit-backdrop-filter:saturate(120%) blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.18)}
+body.theme-light .panel{background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.1)}
+.panel-title{margin:0 0 8px;font-size:16px}
+
+/* 表格 */
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 6px;text-align:left}
+body.theme-light .table th,body.theme-light .table td{border-bottom:1px solid rgba(0,0,0,.08)}
+.table tr:last-child th,.table tr:last-child td{border-bottom:none}
+.table th{color:var(--muted);width:108px}
+
+/* 简介正文 */
+.desc-body{white-space:pre-line;color:var(--text);opacity:.92;line-height:1.75}
+
+.block-title{margin:16px 0 10px}
+
+/* ========= 单张轮播（左右滑动切换下一张） ========= */
+.carousel{width:100%;border-radius:14px;border:1px solid var(--line);background:var(--card);overflow:hidden}
+.carousel .viewport{width:100%;height:auto}
+.carousel .track{display:flex;overflow:hidden;scroll-behavior:smooth;}
+.carousel img{flex:0 0 100%;width:100%;height:auto;object-fit:cover;aspect-ratio:16/9;display:block}
+
+/* 鼠标/手势拖动反馈 */
+.carousel.dragging .track{cursor:grabbing}
+
+/* 可选：隐藏滚动条 */
+.carousel .track::-webkit-scrollbar{display:none}
+.carousel .track{scrollbar-width:none}
