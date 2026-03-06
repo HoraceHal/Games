@@ -23,21 +23,21 @@
 
   <div class="container">
     <div class="columns">
-      <!-- 左侧：封面 + 单张轮播（左右滑动） -->
+      <!-- 左：封面 + 小尺寸轮播（带左右按钮） -->
       <section id="leftCol">
-        <div class="hero hero-box"><img id="hero" alt="封面" /></div>
+        <div class="hero hero-box"><img id="hero" alt="封面" loading="lazy" /></div>
 
         <h3 class="block-title">游戏截图</h3>
-        <div class="carousel" id="carousel">
-          <div class="viewport">
-            <div class="track" id="track"></div>
-          </div>
+        <div class="carousel small" id="carousel">
+          <button class="nav prev" aria-label="上一张" id="prevBtn">◀</button>
+          <div class="viewport"><div class="track" id="track"></div></div>
+          <button class="nav next" aria-label="下一张" id="nextBtn">▶</button>
         </div>
 
         <div class="back" style="margin-top:12px"><a class="toggle" href="index.html">← 返回首页</a></div>
       </section>
 
-      <!-- 右侧：窄版信息面板（圆角淡蒙版） -->
+      <!-- 右：更窄的圆角淡蒙版卡片（版本信息 + 游戏简介） -->
       <aside id="rightCol">
         <div class="panel">
           <h3 class="panel-title">版本信息</h3>
@@ -49,7 +49,6 @@
             <tr><th>浏览量</th><td id="views"></td></tr>
           </table>
         </div>
-
         <div class="panel" style="margin-top:16px">
           <h3 class="panel-title">游戏简介</h3>
           <p id="desc" class="desc-body"></p>

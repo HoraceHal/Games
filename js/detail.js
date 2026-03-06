@@ -37,31 +37,32 @@
       document.getElementById('date').textContent     = g.date || '';
       document.getElementById('views').textContent    = fmtViews(g.views||0);
 
-      // 构建单张轮播
+      // 轮播：一次一张，小尺寸 + 左右按钮 + 拖拽/触摸
       const track = document.getElementById('track');
       const shots = Array.isArray(g.shots) ? g.shots : [];
       track.innerHTML = shots.map((u,i)=>`<img src="${u}" alt="截图${i+1}" loading="lazy" onerror="this.onerror=null;this.src='${fallbackShot}'"/>`).join('');
 
-      const viewport = track.parentElement; // .viewport
+      const viewport = track.parentElement;
       const carousel = document.getElementById('carousel');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const maxIdx = Math.max(0, shots.length - 1);
+      const getIndex = () => Math.round(track.scrollLeft / viewport.clientWidth);
+      const toIndex = (idx) => track.scrollTo({left: idx * viewport.clientWidth, behavior: 'smooth'});
 
-      // 拖拽/滑动切换：按住拖动，松开后对齐到最近一张
-      let isDown=false, startX=0, startLeft=0, lastTime=0, lastX=0;
-      const getIndex=()=> Math.round(track.scrollLeft / viewport.clientWidth);
-      const clamp=(n,min,max)=> Math.max(min, Math.min(max, n));
-      const toIndex=(idx)=> track.scrollTo({left: idx*viewport.clientWidth, behavior:'smooth'});
+      prevBtn.addEventListener('click', ()=>{ toIndex(Math.max(0, getIndex()-1)); });
+      nextBtn.addEventListener('click', ()=>{ toIndex(Math.min(maxIdx, getIndex()+1)); });
 
-      // 鼠标
-      track.addEventListener('mousedown', (e)=>{ isDown=true; carousel.classList.add('dragging'); startX=e.pageX; startLeft=track.scrollLeft; lastTime=Date.now(); lastX=e.pageX; });
-      window.addEventListener('mouseup', ()=>{ if(!isDown) return; isDown=false; carousel.classList.remove('dragging'); const dt=Math.max(1,Date.now()-lastTime); const v=(lastX-startX)/dt; // 惯性方向
-        let idx = getIndex(); if(Math.abs(v)>0.5){ idx += (v<0?1:-1); } idx=clamp(idx,0,Math.max(0,shots.length-1)); toIndex(idx); });
-      track.addEventListener('mousemove', (e)=>{ if(!isDown) return; e.preventDefault(); const dx=e.pageX-startX; track.scrollLeft = startLeft - dx; lastX=e.pageX; lastTime=Date.now(); });
+      // 拖拽/触摸滑动
+      let isDown=false,startX=0,startLeft=0,lastX=0,lastTime=0;
+      track.addEventListener('mousedown',(e)=>{ isDown=true; carousel.classList.add('dragging'); startX=e.pageX; startLeft=track.scrollLeft; lastX=e.pageX; lastTime=Date.now(); });
+      window.addEventListener('mouseup',()=>{ if(!isDown) return; isDown=false; carousel.classList.remove('dragging'); const v=(lastX-startX)/Math.max(1,Date.now()-lastTime); let idx=getIndex(); if(Math.abs(v)>0.5){ idx += (v<0?1:-1);} toIndex(Math.max(0,Math.min(maxIdx,idx))); });
+      track.addEventListener('mousemove',(e)=>{ if(!isDown) return; e.preventDefault(); const dx=e.pageX-startX; track.scrollLeft = startLeft - dx; lastX=e.pageX; lastTime=Date.now(); });
 
-      // 触摸
-      let tStartX=0, tStartLeft=0, tLastX=0, tLastTime=0;
-      track.addEventListener('touchstart',(e)=>{ const t=e.touches[0]; isDown=true; carousel.classList.add('dragging'); tStartX=t.clientX; tStartLeft=track.scrollLeft; tLastX=t.clientX; tLastTime=Date.now(); }, {passive:true});
-      track.addEventListener('touchmove',(e)=>{ const t=e.touches[0]; track.scrollLeft = tStartLeft - (t.clientX - tStartX); tLastX=t.clientX; tLastTime=Date.now(); }, {passive:true});
-      track.addEventListener('touchend',()=>{ if(!isDown) return; isDown=false; carousel.classList.remove('dragging'); const dt=Math.max(1,Date.now()-tLastTime); const v=(tLastX-tStartX)/dt; let idx=getIndex(); if(Math.abs(v)>0.5){ idx += (v<0?1:-1); } idx=clamp(idx,0,Math.max(0,shots.length-1)); toIndex(idx); }, {passive:true});
+      let tStartX=0,tStartLeft=0,tLastX=0,tLastTime=0;
+      track.addEventListener('touchstart',(e)=>{ const t=e.touches[0]; isDown=true; carousel.classList.add('dragging'); tStartX=t.clientX; tStartLeft=track.scrollLeft; tLastX=t.clientX; tLastTime=Date.now(); },{passive:true});
+      track.addEventListener('touchmove',(e)=>{ const t=e.touches[0]; track.scrollLeft = tStartLeft - (t.clientX - tStartX); tLastX=t.clientX; tLastTime=Date.now(); },{passive:true});
+      track.addEventListener('touchend',()=>{ if(!isDown) return; isDown=false; carousel.classList.remove('dragging'); const v=(tLastX-tStartX)/Math.max(1,Date.now()-tLastTime); let idx=getIndex(); if(Math.abs(v)>0.5){ idx += (v<0?1:-1);} toIndex(Math.max(0,Math.min(maxIdx,idx))); },{passive:true});
 
       // 滚轮上下 -> 左右
       track.addEventListener('wheel',(e)=>{ if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){ e.preventDefault(); track.scrollLeft += e.deltaY; } }, {passive:false});
