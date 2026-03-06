@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -6,53 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>游戏详情</title>
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/detail-rightpanel.css" />
 </head>
 <body>
 <header class="header">
   <div class="container nav">
     <div class="brand" style="gap:12px"><span class="logo"></span><span class="brand-name">Games 目录</span></div>
-    <div class="actions"><button id="themeToggle" class="toggle" aria-label="切换主题">夜间</button></div>
+    <div class="actions"><button id="themeToggle" class="toggle" aria-label="切换主题">🌙 夜间</button></div>
   </div>
 </header>
 <main>
-  <div class="container" style="padding:14px 0">
-    <div class="breadcrumb" style="color:var(--muted);font-size:13px;margin:6px 0">首页 / 游戏详情</div>
-    <h1 id="title" class="game-title" style="margin:6px 0 10px"></h1>
-  </div>
-
+  <div class="container" style="padding:14px 0"><div class="breadcrumb" style="color:var(--muted);font-size:13px;margin:6px 0">首页 / 游戏详情</div><h1 id="title" style="margin:6px 0 10px"></h1></div>
   <div class="container">
-    <div class="columns">
-      <!-- 左：封面 + 小尺寸轮播（带左右按钮） -->
-      <section id="leftCol">
-        <div class="hero hero-box"><img id="hero" alt="封面" loading="lazy" /></div>
-
-        <h3 class="block-title">游戏截图</h3>
-        <div class="carousel small" id="carousel">
-          <button class="nav prev" aria-label="上一张" id="prevBtn">◀</button>
-          <div class="viewport"><div class="track" id="track"></div></div>
-          <button class="nav next" aria-label="下一张" id="nextBtn">▶</button>
-        </div>
-
+    <div class="columns" style="display:grid;grid-template-columns:1.1fr .9fr;gap:24px">
+      <section class="section" style="background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px">
+        <div class="hero" style="position:relative;height:auto;border-bottom:1px solid var(--line);margin:-16px -16px 16px -16px;border-top-left-radius:14px;border-top-right-radius:14px;overflow:hidden"><img id="hero" alt="封面" style="width:100%;height:auto;object-fit:cover;aspect-ratio:16/9"/></div>
+        <h3 style="margin:0 0 8px">游戏简介</h3>
+        <p id="desc" style="white-space:pre-line;color:var(--text);opacity:.9;line-height:1.7"></p>
+        <h3 style="margin:16px 0 8px">游戏截图</h3>
+        <div id="gallery" class="gallery"></div>
         <div class="back" style="margin-top:12px"><a class="toggle" href="index.html">← 返回首页</a></div>
       </section>
-
-      <!-- 右：更窄的圆角淡蒙版卡片（版本信息 + 游戏简介） -->
-      <aside id="rightCol">
-        <div class="panel">
-          <h3 class="panel-title">版本信息</h3>
-          <table class="table">
-            <tr><th>文件大小</th><td id="size"></td></tr>
-            <tr><th>版本</th><td id="version"></td></tr>
-            <tr><th>平台</th><td id="platform"></td></tr>
-            <tr><th>更新日期</th><td id="date"></td></tr>
-            <tr><th>浏览量</th><td id="views"></td></tr>
-          </table>
-        </div>
-        <div class="panel" style="margin-top:16px">
-          <h3 class="panel-title">游戏简介</h3>
-          <p id="desc" class="desc-body"></p>
-        </div>
+      <aside class="section" style="background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px">
+        <h3 style="margin:0 0 8px">版本信息</h3>
+        <table class="table" style="width:100%;border-collapse:collapse">
+          <tr><th style="width:120px;text-align:left;border-bottom:1px solid var(--line);padding:10px 6px">文件大小</th><td id="size" style="border-bottom:1px solid var(--line);padding:10px 6px"></td></tr>
+          <tr><th style="text-align:left;border-bottom:1px solid var(--line);padding:10px 6px">版本</th><td id="version" style="border-bottom:1px solid var(--line);padding:10px 6px"></td></tr>
+          <tr><th style="text-align:left;border-bottom:1px solid var(--line);padding:10px 6px">平台</th><td id="platform" style="border-bottom:1px solid var(--line);padding:10px 6px"></td></tr>
+          <tr><th style="text-align:left;border-bottom:1px solid var(--line);padding:10px 6px">更新日期</th><td id="date" style="border-bottom:1px solid var(--line);padding:10px 6px"></td></tr>
+          <tr><th style="text-align:left;border-bottom:1px solid var(--line);padding:10px 6px">浏览量</th><td id="views" style="border-bottom:1px solid var(--line);padding:10px 6px"></td></tr>
+        </table>
       </aside>
     </div>
   </div>
