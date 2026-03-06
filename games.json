@@ -1,72 +1,72 @@
 [
   {
-    "id": "Agent17",
-    "title": "[精品SLG] 特工17 Agent17 Ver0.26.10 官方中文版 [中文/动态/沙盒/赞助码/附存档/步兵]",
-    "platform": "安卓 /PC /单机 ",
-    "cover": "./images/covers/Agent17.png",
-    "size": "2.8 GB",
-    "version": "v0.26.10 最新版",
+    "id": "agent17",
+    "title": "Agent17 v0.26 精选版",
+    "platform": "安卓 / 中文",
+    "cover": "https://picsum.photos/seed/agent17/800/450",
+    "size": "3.1 GB",
+    "version": "v0.26.10 中文",
     "date": "2026-03-01",
-    "desc": "某年某月某日，你在车祸现场捡到了一部手机。\n当你打算卖掉它赚点零花钱的时候，突然接到了一个电话。\n对方自称代号17号，是一位特工，几乎无所不能。\n但是貌似脑袋不太灵光，把你认作她的顶头上司。\n那么你会让他做些什么呢，教训欺负你的小太妹？\n调查你女神的真.相？或者别的什么？。",
+    "desc": "示例条目：占位简介\n演示移动端优化与数字分页。",
     "shots": [
-      "./images/shots/Agent17/Agent1701.png",
-      "./images/shots/Agent17/Agent1702.png",
-      "./images/shots/Agent17/Agent1703.png",
-      "./images/shots/Agent17/Agent1704.png"
+      "https://picsum.photos/seed/agent1/1280/720",
+      "https://picsum.photos/seed/agent2/1280/720",
+      "https://picsum.photos/seed/agent3/1280/720",
+      "https://picsum.photos/seed/agent4/1280/720"
     ],
-    "category": "安卓+PC游戏 · 高评分…",
+    "category": "安卓游戏 · 高评分…",
     "tags": [
-      "推荐",
-      "最新"
+      "最新",
+      "推荐"
     ],
     "status": "更新",
     "statusColor": "#22c55e",
-    "views": 98
+    "views": 27500
   },
   {
     "id": "meide",
-    "title": "V.I.R.T.U.E.S. 美德 V1-17 全章节完结精翻汉化版",
+    "title": "V.I.R.T.U.E.S. 美德 V1-17 全章节精翻汉化版",
     "platform": "安卓 / 中文",
     "cover": "./images/covers/mygame.png",
     "size": "2 GB",
     "version": "国风神作SLG/中文/动态",
     "date": "2026-02-05",
-    "desc": "游戏的制作是相当的精致，3D建模CG+2D纯手绘的UI和人物立绘。\n游戏风格属于亚洲日式风格，非常符合我们的审美！\n还有动态CG场景，非常给力！人设风骚，剧情真心爽的飞起~",
+    "desc": "示例条目：使用本地图片路径。",
     "shots": [
-      "./images/shots/meide/mygame-01.png",
-      "./images/shots/meide/mygame-02.png",
-      "./images/shots/meide/mygame-03.png",
-      "./images/shots/meide/mygame-04.png"
+      "./images/shots/mygame-01.png",
+      "./images/shots/mygame-02.png",
+      "./images/shots/mygame-03.png",
+      "./images/shots/mygame-04.png"
     ],
     "category": "安卓游戏 · 高评分…",
     "tags": [
       "最新"
     ],
     "status": "更新",
-    "statusColor": "#16a34a",
+    "statusColor": "#22c55e",
     "views": 86
   },
   {
-    "id": "nzbo",
-    "title": "【精品SLG】隔壁的女主播 首发正式版 [官中/3D/全动态/步兵] ",
+    "id": "hades",
+    "title": "Hades 黑帝斯",
     "platform": "PC / 中文",
-    "cover": "./images/covers/nzbo.png",
-    "size": "20 GB",
-    "version": "v1.05",
-    "date": "2025-12-28",
-    "desc": "Female Anchor Next Door 这款游戏是一款融合日常与奇幻元素的互动视觉小说，玩家将扮演一位普通上班族，在平淡生活中邂逅各种充满魅力的女性角色。/n从现实的职场到超现实的魔法世界，每一次相遇都带来意想不到的冒险与心动。/n你的选择将决定故事走向，解锁多样化的剧情与结局。",
+    "cover": "https://picsum.photos/seed/hades/800/450",
+    "size": "14.7 GB",
+    "version": "v1.38220",
+    "date": "2025-04-28",
+    "desc": "示例条目：Perf 版分页/筛选/搜索演示。",
     "shots": [
-      "./images/shots/nzbo/nzbo01.png",
-      "./images/shots/nzbo/nzbo02.png",
-      "./images/shots/nzbo/nzbo03.png",
-      "./images/shots/nzbo/nzbo04.png"
+      "https://picsum.photos/seed/hades1/1280/720",
+      "https://picsum.photos/seed/hades2/1280/720",
+      "https://picsum.photos/seed/hades3/1280/720",
+      "https://picsum.photos/seed/hades4/1280/720"
     ],
-    "category": "PC游戏 · 高评分…",
+    "category": "电脑游戏 · 高评分…",
     "tags": [
       "推荐"
     ],
     "status": "更新",
-    "statusColor": "#64748b",
-    "views": 102
+    "statusColor": "#22c55e",
+    "views": 22340
   }
 ]
