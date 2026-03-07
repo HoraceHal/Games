@@ -1,32 +1,30 @@
 
-终极加速包（Cloudflare Pages/Workers 静态站）
-=================================================
-包含：
-1) _headers：启用强缓存（静态资源 1 年）、HTML 实时更新、HSTS、Vary。
-2) service-worker.js：HTML 网络优先、CSS/JS SWR、图片缓存优先，断网可用。
-3) js/perf-init.js：LazyLoad + LQIP + 自动拼接 Cloudflare Image Resizing (cdn-cgi/image)。
-4) css/lqip.css：LQIP 渐进清晰动画样式。
+GitHub Pages 大陆访问图片延迟：前端加速补丁（v1）
+========================================
 
-如何接入
---------
-A. 把本包放在站点根目录（与 index.html 同级）后部署。
-B. 在所有页面的 <head> 中引入：
-   <link rel="stylesheet" href="/css/lqip.css">
-   <script src="/js/perf-init.js" defer></script>
+为什么会“图片慢慢出”？
+- 跨境链路 + 多图并发请求导致首屏等待更明显；开代理后变快通常是因为链路/出口不同。
 
-C. 把图片改成懒加载 + LQIP：
-   <img class="lazy lqip" data-lqip="/images/foo_lqip.jpg" data-src="/images/foo.jpg" alt="...">
-   （可不提供 data-lqip，仅 data-src 亦可）
+本补丁做什么：
+1) 强化 Service Worker：缓存 HTML(网络优先)、CSS/JS/JSON(SWR)、图片(缓存优先)。
+2) 首屏图片优化：只保留前几张关键图立即加载，其它图片进入视口再加载，减少首屏并发。
 
-说明
-----
-- perf-init.js 会根据容器宽度自动生成 /cdn-cgi/image/width=...,quality=70 的 URL，
-  由 Cloudflare 在边缘动态压缩/裁剪，大幅减小图片体积。
-- Service Worker 将对 HTML 采用网络优先（可离线回退），CSS/JS 采用 SWR，图片采用缓存优先。
-- _headers 让静态资源命中浏览器/边缘缓存；HTML 始终最新。
+如何安装（必须做）：
+A) 把本包文件覆盖到仓库根目录：
+   - service-worker.js（覆盖你现有的同名文件）
+   - js/ghpages-perf-init.js（新增）
+   - css/ghpages-perf.css（新增）
 
-可选：Cloudflare 仪表盘
-----------------------
-- Speed → Optimization：开启 Brotli、Auto Minify（HTML/CSS/JS）。
-- Caching → Cache Rules：为非 HTML 资源设置 Cache Everything（若未使用 Pages 的 _headers 亦可）。
-- Images：若开通 Cloudflare Images，可直接托管并自适应（本包已支持 cdn-cgi/image 方式）。
+B) 在 index.html 与 detail.html 的 </head> 之前加入：
+   <link rel="stylesheet" href="./css/ghpages-perf.css">
+
+C) 在 index.html 与 detail.html 的 </body> 之前加入：
+   <script defer src="./js/ghpages-perf-init.js"></script>
+
+提示：
+- 部署后请强制刷新（Ctrl+F5 / Cmd+Shift+R）。
+- 如果之前装过旧的 Service Worker，可在浏览器 DevTools → Application → Service Workers → Unregister。
+
+可选（更进一步）：
+- 把封面/截图转成 WebP/AVIF（体积可再降 30%-70%），大幅改善大陆加载。
+- 如后续愿意用自定义域 + CDN，可把图片迁移到 Cloudflare R2 公共桶 + 自定义域并开启缓存。
