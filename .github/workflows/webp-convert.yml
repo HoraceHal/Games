@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   webp:
-    # 防止 actions 自己提交后又触发无限循环
+    # 防止 actions 自己提交后反复触发
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
 
@@ -51,4 +51,3 @@ jobs:
           else
             echo "No changes to commit."
           fi
-``
