@@ -1,24 +1,20 @@
-name: Convert PNG to WebP (auto)
+name: Convert PNG to WebP (recursive, covers + shots)
 
 on:
-  # 1) 监听 PNG 变更（新增/修改）
   push:
     branches: [ main ]
     paths:
-      - "images/**/*.png"
-    # 避免 .webp 的提交再次触发循环
+      - "images/**/*.png"    # 监听任意子目录下的 PNG
   pull_request:
     branches: [ main ]
     paths:
       - "images/**/*.png"
-  # 2) 允许手动触发
-  workflow_dispatch: {}
-  # 3)（可选）每天 1:30 UTC 扫一遍，把遗漏的 PNG 也转了
+  workflow_dispatch: {}      # 手动运行
   schedule:
-    - cron: "30 1 * * *"
+    - cron: "30 1 * * *"     # 每天 01:30 UTC 全量补齐（可按需修改或删除）
 
 permissions:
-  contents: write   # 需要写入权限才能把 .webp 回推
+  contents: write
 
 concurrency:
   group: png-to-webp-${{ github.ref }}
@@ -28,30 +24,30 @@ jobs:
   convert:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (full history not required)
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install WebP tools (cwebp)
+      - name: Install WebP tools
         run: |
           sudo apt-get update
           sudo apt-get install -y webp
 
-      # 仅转换新增/修改过的 PNG；手动/定时触发时转换所有缺失项
-      - name: Compute PNG targets
+      # 计算需要转换的 PNG（递归）
+      - name: Compute PNG targets (recursive, fill missing)
         id: targets
         shell: bash
         run: |
           set -e
-          # 触发类型判断
+          # push/pr 只处理本次变更；手动/定时则全量扫描
           if [[ "${{ github.event_name }}" == "push" || "${{ github.event_name }}" == "pull_request" ]]; then
-            # 取这次提交里改动的 PNG 列表
-            git diff --name-only HEAD~1 HEAD | awk '/^images\\/.*\\.png$/' > /tmp/png_changed.txt || true
+            # 取最近一次提交（或 PR 变更）涉及到的 PNG
+            git diff --name-only HEAD~1 HEAD | awk '/^images\/.*\.png$/i' > /tmp/png_changed.txt || true
           else
-            # 手动/定时：全量扫描
+            # 全量扫描 images 目录
             find images -type f -iname '*.png' | sort > /tmp/png_changed.txt || true
           fi
 
-          # 过滤掉已经存在“同名 .webp”的文件
+          # 过滤：只保留“同名 .webp 不存在”的 PNG
           > /tmp/png_todo.txt
           while IFS= read -r png; do
             [[ -z "$png" ]] && continue
@@ -61,16 +57,14 @@ jobs:
             fi
           done < /tmp/png_changed.txt
 
-          echo "---- Changed PNG ----"
-          cat /tmp/png_changed.txt || true
-          echo "---- To Convert ----"
-          cat /tmp/png_todo.txt || true
+          echo "---- Changed PNG ----"; cat /tmp/png_changed.txt || true
+          echo "---- To Convert ----"; cat /tmp/png_todo.txt || true
 
-          # 输出给后续步骤用
           count=$(wc -l < /tmp/png_todo.txt | tr -d ' ')
           echo "count=$count" >> $GITHUB_OUTPUT
 
-      - name: Convert to WebP (quality 82, lossless for alpha)
+      # 递归转换（covers + shots 全覆盖）
+      - name: Convert to WebP (quality 82, near-lossless for alpha)
         if: steps.targets.outputs.count != '0'
         shell: bash
         run: |
@@ -78,12 +72,7 @@ jobs:
           while IFS= read -r png; do
             [[ -z "$png" ]] && continue
             webp="${png%.*}.webp"
-            # 判断是否含透明通道（有透明用无损更合适）
-            if identify -format '%[channels]' "$png" 2>/dev/null | grep -qi 'a'; then
-              # 安装 ImageMagick 的 identify，如果不存在就装（某些 runner 不带）
-              :
-            fi
-            # 统一用 cwebp；对透明 PNG，开启 near-lossless 可显著减体积且外观接近无损
+            # 统一使用 cwebp；参数对 UI/截图较友好
             cwebp -q 82 -m 6 -metadata icc -alpha_q 85 -near_lossless 60 "$png" -o "$webp"
             echo "generated: $webp"
           done < /tmp/png_todo.txt
@@ -92,13 +81,12 @@ jobs:
         if: steps.targets.outputs.count != '0'
         run: |
           git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "actions[bot]@users.noreply.github.com"
           git add images/**/*.webp || true
-          git commit -m "Auto: convert PNG to WebP" || echo "No changes to commit"
-          # 防止与保护分支策略冲突；如受保护请改用 PR 方式
+          git commit -m "Auto: convert PNG to WebP (recursive)" || echo "No changes"
           git push
 
-      # 可选：在日志里提示“没有需要转换的文件”
       - name: Nothing to convert
         if: steps.targets.outputs.count == '0'
-        run: echo "No PNG to convert (or WebP already exists)."
+        run: echo "No PNG to convert (or all webp already exist)."
+``
