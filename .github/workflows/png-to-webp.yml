@@ -89,4 +89,3 @@ jobs:
       - name: Nothing to convert
         if: steps.targets.outputs.count == '0'
         run: echo "No PNG to convert (or all webp already exist)."
-``
