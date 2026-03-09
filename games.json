@@ -15,10 +15,7 @@
       "./images/shots/Agent17/Agent1704.webp"
     ],
     "category": "安卓游戏 · 高评分…",
-    "tags": [
-      "最新",
-      "推荐"
-    ],
+    "tags": ["最新", "推荐"],
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 207
@@ -39,10 +36,8 @@
       "./images/shots/meide/mygame-04.webp"
     ],
     "category": "安卓游戏 · 高评分…",
-    "tags": [
-      "最新"
-    ],
-    "status": "更新",
+    "tags": ["推荐"],
+    "status": "",
     "statusColor": "#22c55e",
     "views": 86
   },
@@ -62,9 +57,7 @@
       "./images/shots/nzbo/nzbo04.webp"
     ],
     "category": "电脑游戏 · 高评分…",
-    "tags": [
-      "推荐"
-    ],
+    "tags": ["推荐"],
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 74
@@ -85,10 +78,7 @@
       "./images/shots/gbrq/gbrq04.webp"
     ],
     "category": "PC游戏 · 高评分…",
-    "tags": [
-      "最新",
-      "推荐"
-    ],
+    "tags": ["最新", "推荐"],
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 207
@@ -107,10 +97,7 @@
       "./images/shots/gbrq2/gbrq202.webp"
     ],
     "category": "PC游戏 · 高评分…",
-    "tags": [
-      "最新",
-      "推荐"
-    ],
+    "tags": ["最新", "推荐"],
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 209
@@ -131,10 +118,7 @@
       "./images/shots/zsyw/zsyw04.webp"
     ],
     "category": "安卓游戏 · 高评分…",
-    "tags": [
-      "最新",
-      "推荐"
-    ],
+    "tags": ["最新", "推荐"],
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 219
@@ -155,12 +139,28 @@
       "./images/shots/tswdxbb/tswdxbb04.webp"
     ],
     "category": "安卓游戏 · 高评分…",
-    "tags": [
-      "最新",
-      "推荐"
-    ],
+    "tags": ["最新", "推荐"],
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 204
+  },
+  {
+    "id": "smzlz",
+    "title": "【经典大作强势更新】沙漠追猎者 Desert Stalker v0.20 官方中文版",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/smzlz.webp",
+    "size": "2.7 GB",
+    "version": "v 0.20",
+    "date": "2026-03-08",
+    "desc": "这沙漠潜行者》让你控一位经验丰富的古代拾荒者，他的主要目标是在文明废墟中寻找稀有物品。当你发现一件不仅能影响过去，还能塑造未来的神器时，一切都将改变。在如何与周围世界互动、进入情色关系以及统治或拯救末世埃及人民和景观的后果上做出重大决定。个故事是你的故事，你仍然希望拥有你计划过的生活。但当旧希望消逝，新的希望取而代之。过去会困扰你的未来，还是滋养它？当你克服了一切，还剩下什么？",
+    "shots": [
+      "./images/shots/smzlz/smzlz01.webp",
+      "./images/shots/smzlz/smzlz02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 214
   }
 ]
