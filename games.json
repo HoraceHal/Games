@@ -138,5 +138,29 @@
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 219
+  },
+  {
+    "id": "tswdxbb",
+    "title": "【SLG/中文】她是我的小宝贝儿",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/tswdxbb.webp",
+    "size": "2.7 GB",
+    "version": "v 1.4",
+    "date": "2026-03-01",
+    "desc": "这个故事是你的故事，你仍然希望拥有你计划过的生活。但当旧希望消逝，新的希望取而代之。过去会困扰你的未来，还是滋养它？当你克服了一切，还剩下什么？",
+    "shots": [
+      "./images/shots/tswdxbb/tswdxbb01.webp",
+      "./images/shots/tswdxbb/tswdxbb02.webp",
+      "./images/shots/tswdxbb/tswdxbb03.webp",
+      "./images/shots/tswdxbb/tswdxbb04.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": [
+      "最新",
+      "推荐"
+    ],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 204
   }
 ]
