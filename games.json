@@ -162,5 +162,24 @@
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 214
+  },
+  {
+    "id": "xtdyw",
+    "title": "夏天的愿望 汉化版 ",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/xtdyw.webp",
+    "size": "1.8 GB",
+    "version": "v 0.5",
+    "date": "2026-03-08",
+    "desc": "这一名年轻人回到家乡;Goldream City——尽情享受夏天。他会逐渐意识到自己的世界并非表面看起来的那样，只有在调查后才发现真相。同时，他会玩得开心的。",
+    "shots": [
+      "./images/shots/xtdyw/xtdyw01.webp",
+      "./images/shots/xtdyw/xtdyw02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 224
   }
 ]
