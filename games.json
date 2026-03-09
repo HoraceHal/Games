@@ -114,5 +114,29 @@
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 209
+  },
+  {
+    "id": "zsyw",
+    "title": "【完结！】【安卓】【SLG/中文】我真正的愿望/真实情欲 My Real Desire",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/zsyw.png",
+    "size": "2.4 GB",
+    "version": "完结",
+    "date": "2026-03-01",
+    "desc": "玩法是沙盒模式，自由度很高，作者很是用心，剧情方面也非常给力。目前已经更新多次，有很多上垒剧情，全动态CG，效果真的是超级赞！目录可看全CG，强烈推荐大家体验~",刚刚大学毕业的你，应聘到一家游戏公司当开发人员（就是社畜了，或者说程序猿。。。）因为囊中羞涩，你只得和别人合租一间公寓，幸运的是同居的居然有很多美女！公司里面也有所谓的号称六天使的6大美女！你第一天上班的当天晚上，就被合租的妹子给逆推了！看来你的桃花运就要来啦~
+    "shots": [
+      "./images/shots/zsyw/zsyw01.png",
+      "./images/shots/zsyw/zsyw02.png",
+      "./images/shots/zsyw/zsyw03.png",
+      "./images/shots/zsyw/zsyw04.png"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": [
+      "最新",
+      "推荐"
+    ],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 219
   }
 ]
