@@ -1,7 +1,7 @@
 [
   {
     "id": "agent17",
-    "title": "Agent17 v0.26 精选版",
+    "title": "01 特工17 最新版",
     "platform": "安卓 / 中文",
     "cover": "./images/covers/Agent17.webp",
     "size": "3.1 GB",
@@ -22,7 +22,7 @@
   },
   {
     "id": "meide",
-    "title": "V.I.R.T.U.E.S. 美德 V1-17 全章节精翻汉化版",
+    "title": "02 美德 V1-17 全章节",
     "platform": "安卓 / 中文",
     "cover": "./images/covers/mygame.webp",
     "size": "2 GB",
@@ -43,7 +43,7 @@
   },
   {
     "id": "nzbo",
-    "title": "【精品SLG】隔壁的女主播 首发正式版 [官中/3D/全动态/步兵]",
+    "title": "03【精品SLG】隔壁的女主播 首发正式版 [官中/3D/全动态/步兵]",
     "platform": "PC / 中文",
     "cover": "./images/covers/nzbo.webp",
     "size": "20 GB",
@@ -64,7 +64,7 @@
   },
   {
     "id": "gbrq",
-    "title": "[PC/精品SLG] 隔壁的美艳妻 The Wife Next Door Ver1.7.13+DLC 官方中文版 [官中/互动/全收集存档/3D/全动态/步兵/13G]",
+    "title": "04 [PC/精品SLG] 隔壁的美艳妻 Ver1.7.13+DLC 官方中文版 [官中/互动/全收集存档/3D/全动态/步兵]",
     "platform": "PC / 中文",
     "cover": "./images/covers/gbrq.webp",
     "size": "13 GB",
@@ -85,7 +85,7 @@
   },
   {
     "id": "gbrq2",
-    "title": "[PC/精品SLG] 邻居的人妻2～在丈夫身旁忘我 官方中文版 [新官中/动态/互动/步兵/4.3G]",
+    "title": "05 [PC/精品SLG] 邻居的人妻2～在丈夫身旁忘我中出 官方中文版 [新官中/动态/互动/步兵/4.3G]",
     "platform": "PC / 中文",
     "cover": "./images/covers/gbrq2.webp",
     "size": "4.3 GB",
@@ -104,7 +104,7 @@
   },
   {
     "id": "zsyw",
-    "title": "【完结！】【安卓】【SLG/中文】我真正的愿望/真实情欲 My Real Desire",
+    "title": "06【完结！】【安卓】【SLG/中文】我真正的愿望/真实情欲 My Real Desire",
     "platform": "安卓 / 中文",
     "cover": "./images/covers/zsyw.webp",
     "size": "2.4 GB",
@@ -125,7 +125,7 @@
   },
   {
     "id": "tswdxbb",
-    "title": "【SLG/中文】她是我的小宝贝儿",
+    "title": "07【SLG/中文】她是我的小宝贝儿",
     "platform": "安卓 / 中文",
     "cover": "./images/covers/tswdxbb.webp",
     "size": "2.7 GB",
@@ -146,7 +146,7 @@
   },
   {
     "id": "smzlz",
-    "title": "【经典大作强势更新】沙漠追猎者 Desert Stalker v0.20 官方中文版",
+    "title": "08【经典大作强势更新】沙漠追猎者 Desert Stalker v0.20 官方中文版",
     "platform": "安卓 / 中文",
     "cover": "./images/covers/smzlz.webp",
     "size": "2.7 GB",
@@ -165,7 +165,7 @@
   },
   {
     "id": "xtdyw",
-    "title": "夏天的愿望 汉化版 ",
+    "title": "09 夏天的愿望 汉化版 ",
     "platform": "安卓 / 中文",
     "cover": "./images/covers/xtdyw.webp",
     "size": "1.8 GB",
@@ -184,7 +184,7 @@
   },
   {
     "id": "gdqy",
-    "title": "孤岛奇缘 官方中文版 ",
+    "title": "10 孤岛奇缘 官方中文版 ",
     "platform": "PC / 中文",
     "cover": "./images/covers/gdqy.webp",
     "size": "12 GB",
@@ -200,5 +200,62 @@
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 224
+  },
+  {
+    "id": "sst",
+    "title": "11 三十天  汉化版 ",
+    "platform": "PC / 中文",
+    "cover": "./images/covers/sst.webp",
+    "size": "2.6 GB",
+    "version": "v0.10.8.3 ",
+    "date": "2026-03-10",
+    "desc": "《三十天》是一款以选择为驱动的游戏，设计为多轮游玩，体验各异。你扮演阿姨、叔叔、表亲（男女）或家族朋友（男女），与两个非常可爱的18岁异卵双胞胎共度一个月。这两个孩子一直被保护，一生只上过私立学校。在接下来的一个月里，你将经历起伏，帮助他们了解世界，帮助他们成为注定要成为的女性。在这个月里，你会遇到许多其他人，你可以追求、浪漫或与亚历克斯和凯拉一起堕落。",
+    "shots": [
+      "./images/shots/sst/ssst01.webp",
+      "./images/shots/sst/sst02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "",
+    "statusColor": "#22c55e",
+    "views": 224
+  },
+  {
+    "id": "nsdzjjy",
+    "title": "12 女神的最佳交易 ",
+    "platform": "PC / 中文",
+    "cover": "./images/covers/nsdzjjy.webp",
+    "size": "2.3 GB",
+    "version": "v4.5 ",
+    "date": "2026-03-10",
+    "desc": "又名：《我的最佳交易》你因为救一个横穿马路的女孩而不幸的被大卡车撞死了。死后你遇到了一个女神，女神跟你提出一个交易。原来，这个女神是爱之女神，因为被众神排挤出了统治阶层，需要你的帮助。你需要收集爱的能量，然后帮助女神重新回到统治世界的众神一族之中。为了让你更加快速的收集爱~女神给予了你两个超能力~一个是你的触碰，会让女性对你慢慢沉迷~一个是你能够进入别人的梦境，并且在里面胡作非为~你重生在了一个倒霉的男孩身体里面，在这个新家里，你有一个超级性·感漂亮的妈妈和两个可爱的妹妹~拥有超能力的你会怎么做呢？出场的女角色也是非常多，妈妈，妹妹，女同学，女老师，路人女等等。",
+    "shots": [
+      "./images/shots/sst/nsdzjjy01.webp",
+      "./images/shots/sst/nsdzjjy02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "",
+    "statusColor": "#22c55e",
+    "views": 229
+  },
+  {
+    "id": "ysyc",
+    "title": "13 一生一次 官方中文完结版 ",
+    "platform": "PC / 中文",
+    "cover": "./images/covers/ysyc.webp",
+    "size": "2.3 GB",
+    "version": "v1.0 ",
+    "date": "2026-03-10",
+    "desc": "你住在米斯特伯里，一个看似普通的小镇，你和家人过着看似正常的生活。然而，你很快会发现这里隐藏着一些深沉黑暗的秘密，事情可能会迅速升温......从潜入监狱，到探索神秘豪宅，再到世界另一端：展开阴谋冒险，遇见奇异人物，体验独特体验，诱惑美丽女孩，如果有时间，还要拯救世界。如果阿斯塔罗斯掌权，那将是我们所有人的终结。只有你能阻止他。这是上帝。",
+    "shots": [
+      "./images/shots/sst/ysyc01.webp",
+      "./images/shots/sst/ysyc02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "",
+    "statusColor": "#22c55e",
+    "views": 212
   }
 ]
