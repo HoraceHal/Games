@@ -295,5 +295,24 @@
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 224
+  },
+  {
+    "id": "cfds",
+    "title": "15 重返单身 汉化版 ",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/cfds.webp",
+    "size": "3.6 GB",
+    "version": "v 1.26.1",
+    "date": "2026-03-11",
+    "desc": "在《再次单身》中，你再次饰演弗兰克，一位鳏夫，即将离婚。故事开始于弗兰克搬回他曾与第一任妻子共用的阁楼。那是她早逝后，他再也不想回去的地方。你带领弗兰克重新开始生活，很快他在一些他从未预料到的地方找到了陪伴和爱情。",
+    "shots": [
+      "./images/shots/cfds/cfds01.webp",
+      "./images/shots/cfds/cfds02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 224
   }
 ]
