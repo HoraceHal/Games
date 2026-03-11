@@ -314,5 +314,26 @@
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 224
+  },
+  {
+    "id": "trtdl",
+    "title": "16  妈妈为何这样 他让她堕落  官方中文版 ",
+    "platform": "MAC /安卓 /PC/ 中文",
+    "cover": "./images/covers/trtdl.webp",
+    "size": "3.6 GB",
+    "version": "v 0.7.6",
+    "date": "2026-03-11",
+    "desc": "《He Maid Her Fall》是一部母子关系的 NTR，充满了真挚而又令人心碎的时刻。讲述母子二人的生活被自私的外人颠覆，他们努力维持关系不破裂的故事。正当约翰尼认为他的大学生活不会变得更糟时，约翰尼的母亲凯特被提供了一份女佣的工作来补偿他所遭受的痛苦。唯一的转折是……她的工作是照顾伤害她儿子的人；他的欺凌者。",
+    "shots": [
+      "./images/shots/trtdl/trtdl01.webp",
+      "./images/shots/trtdl/trtdl02.webp",
+      "./images/shots/trtdl/trtdl02.webp",
+      "./images/shots/trtdl/trtdl02.webp"
+    ],
+    "category": "安卓PCMAC游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 221
   }
 ]
