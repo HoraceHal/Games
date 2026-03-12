@@ -1,0 +1,4 @@
+
+/* ghpages-perf.css */
+img.lazy-swap{background:#111;opacity:1;transition:opacity .25s ease;}
+img.lazy-swap.lazy-loaded{opacity:1;}
