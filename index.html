@@ -1,28 +1,62 @@
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="auto">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Games</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <script>/* 重要：禁用可能影响加载的 <base>，若你原来有就不要放 */</script>
-  <style>
-    /* 简单的空白防御 */
-    #loading{padding:16px;color:#999}
-    #error{display:none;color:#f55;padding:16px}
-    #content{display:none}
-  </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Games · App Store 风 V4</title>
+  <link rel="canonical" href="" id="linkCanonical"/>
+  <!-- Default OG (静态) -->
+  <meta property="og:site_name" content="Games"/>
+  <meta property="og:title" content="Games 列表"/>
+  <meta property="og:description" content="精选游戏合集，支持搜索与分类筛选"/>
+  <meta property="og:image" content="./images/og-default.png"/>
+  <link rel="stylesheet" href="./css/appstore-v4.css"/>
+  <script>window.__ANALYTICS = { /* cloudflareToken:"", umamiSrc:"", umamiWebsiteId:"" */ };</script>
+  <script defer src="./js/theme.js"></script>
+  <script defer src="./js/analytics.js"></script>
 </head>
 <body>
-  <div id="app">
-    <div id="loading">加载中……</div>
-    <div id="error"></div>
-    <div id="content"></div>
-  </div>
+  <header class="site-header">
+    <div class="brand">Games</div>
+    <div class="controls">
+      <button id="themeBtn" class="btn-ghost" aria-label="切换主题">🌓</button>
+      <input id="searchInput" class="search" type="search" placeholder="搜索：标题 / 标签 / 简介" aria-label="搜索"/>
+      <select id="categorySelect" class="select" aria-label="分类"><option value="__ALL__">全部分类</option></select>
+    </div>
+  </header>
 
-  <script src="./js/app.patched.js"></script>
-  <!-- 若你确实需要 SW，再打开 register-sw.js 的引用，并把 service-worker.js 放到根目录 -->
-  <!-- <script src="./js/register-sw.js"></script> -->
+  <!-- Today 卡片（自动选取 1 条热门或最新） -->
+  <section id="today" class="today" hidden>
+    <div class="today-card" id="todayCard">
+      <div class="today-art"></div>
+      <div class="today-meta">
+        <div class="today-kicker">TODAY</div>
+        <h1 class="today-title" id="todayTitle"></h1>
+        <p class="today-desc" id="todayDesc"></p>
+        <a class="btn-primary" id="todayLink" href="#">立即查看</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="notice" class="notice" hidden></section>
+    <section id="grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <template id="card-tpl">
+    <article class="card" tabindex="0">
+      <div class="cover-wrap"><img class="cover" alt="" loading="lazy"/></div>
+      <div class="meta"><h3 class="title"></h3>
+        <div class="subline">
+          <span class="chip chip-platform"></span>
+          <span class="chip chip-size" hidden></span>
+          <span class="chip chip-status" hidden></span>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script defer src="./js/app.v4.js"></script>
 </body>
 </html>
