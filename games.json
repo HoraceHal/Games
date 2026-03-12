@@ -257,5 +257,83 @@
     "status": "",
     "statusColor": "#22c55e",
     "views": 212
+  },
+    {
+    "id": "bxzdwly",
+    "title": "14 被选中的瓦利亚 汉化版 ",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/bxzdwly.webp",
+    "size": "2.3 GB",
+    "version": "v 0.3",
+    "date": "2026-03-11",
+    "desc": "在一次创伤事件后，主角（你选择的名字）决定亲自出手，寻找那些给他带来所有痛苦和折磨的人。但他不会无能为力，这场创伤性事件唤醒了一种新的力量。这股力量将为他的复仇铺平道路，并帮助他获得他从未梦想过的机会。他会遇到有趣的人，去遥远的地方旅行，希望能坠入爱河。",
+    "shots": [
+      "./images/shots/bxzdwly/bxzdwly01.webp",
+      "./images/shots/bxzdwly/bxzdwly02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 224
+  },
+  {
+    "id": "syz",
+    "title": "15 遗忘症  重制官方中文版 ",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/syz.webp",
+    "size": "3.6 GB",
+    "version": "v 1.07",
+    "date": "2026-03-11",
+    "desc": "英文名：《Amnesia》通用名：《失忆症》在一系列如今笼罩在神秘之中的事件后，我们的主角——一个年轻人——陷入了昏迷，完全失去了过去的自己。他获得了一张干净的起点。现在剩下的就是仔细彻底地探究你过去的每一个方面。",
+    "shots": [
+      "./images/shots/syz/syz01.webp",
+      "./images/shots/syz/syz02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 224
+  },
+  {
+    "id": "cfds",
+    "title": "16 重返单身 汉化版 ",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/cfds.webp",
+    "size": "3.6 GB",
+    "version": "v 1.26.1",
+    "date": "2026-03-11",
+    "desc": "在《再次单身》中，你再次饰演弗兰克，一位鳏夫，即将离婚。故事开始于弗兰克搬回他曾与第一任妻子共用的阁楼。那是她早逝后，他再也不想回去的地方。你带领弗兰克重新开始生活，很快他在一些他从未预料到的地方找到了陪伴和爱情。",
+    "shots": [
+      "./images/shots/cfds/cfds01.webp",
+      "./images/shots/cfds/cfds02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 224
+  },
+  {
+    "id": "trtdl",
+    "title": "17 妈妈为何这样 他让她堕落  官方中文版 ",
+    "platform": "MAC /安卓 /PC/ 中文",
+    "cover": "./images/covers/trtdl.webp",
+    "size": "3.6 GB",
+    "version": "v 0.7.6",
+    "date": "2026-03-11",
+    "desc": "《He Maid Her Fall》是一部母子关系的 NTR，充满了真挚而又令人心碎的时刻。讲述母子二人的生活被自私的外人颠覆，他们努力维持关系不破裂的故事。正当约翰尼认为他的大学生活不会变得更糟时，约翰尼的母亲凯特被提供了一份女佣的工作来补偿他所遭受的痛苦。唯一的转折是……她的工作是照顾伤害她儿子的人；他的欺凌者。",
+    "shots": [
+      "./images/shots/trtdl/trtdl01.webp",
+      "./images/shots/trtdl/trtdl02.webp",
+      "./images/shots/trtdl/trtdl03.webp",
+      "./images/shots/trtdl/trtdl04.webp"
+    ],
+    "category": "安卓PCMAC游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 221
   }
 ]
