@@ -1,15 +1,35 @@
 
-.columns{display:grid;grid-template-columns:7fr 2fr;gap:24px}
-@media(max-width:900px){.columns{grid-template-columns:1fr}}
-.hero-box{border-radius:14px;border:1px solid var(--line);overflow:hidden}
-.hero-box img{width:100%;height:100%;object-fit:contain;background:#000}
-.panel{margin-bottom:16px;border-radius:14px;padding:16px;border:1px solid rgba(0,0,0,.2);background:rgba(255,255,255,.06);backdrop-filter:blur(8px)}
-.table{width:100%;border-collapse:collapse}
-.table th,.table td{padding:8px;border-bottom:1px solid rgba(255,255,255,.1)}
-#panelDesc{margin-top:16px}
-.carousel{position:relative;max-width:620px;border-radius:14px;border:1px solid var(--line);margin-top:10px}
-.carousel .viewport{overflow:hidden}
-.carousel .track{display:flex;scroll-behavior:smooth}
-.carousel img{flex:0 0 100%;object-fit:contain;background:#000;aspect-ratio:16/9}
-.nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:none;border-radius:50%;width:32px;height:32px;cursor:pointer}
-.prev{left:4px}.next{right:4px}
+/* === Desktop Rescue & Image Failure Placeholder === */
+@media (min-width: 992px) {
+  .cards, .grid, .card-list, .games, [class*="grid"], [class*="list"] {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    min-height: 120px;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .hidden, .d-none, [data-hide-desktop="true"] { display: initial !important; }
+  .cards:empty, .grid:empty, .card-list:empty { min-height: 120px; }
+  .game-card, [class*="card"] { min-width: 0; }
+  .game-card img, [class*="card"] img { max-width: 100%; height: auto; object-fit: cover; }
+}
+
+/* 图片加载失败的占位样式 */
+.game-card.img-failed .cover,
+.game-cover.img-failed {
+  background: #1f1f1f;
+  position: relative;
+}
+.game-card.img-failed .cover::after,
+.game-cover.img-failed::after {
+  content: '图片不可用';
+  color: #999;
+  font-size: 12px;
+  position: absolute;
+  left: 8px; bottom: 8px;
+}
+
+/* 通用卡片样式兜底（不影响原有） */
+.game-card { border-radius: 10px; overflow: hidden; background: #121212; border: 1px solid #232323; }
+.game-card .meta { padding: 10px; }
