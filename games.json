@@ -335,5 +335,45 @@
     "status": "更新",
     "statusColor": "#22c55e",
     "views": 221
+  },
+  {
+    "id": "yhsj",
+    "title": "18 永恒世界 Eternum Ver0.9.5 官中 ",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/yhsj.webp",
+    "size": "3.9 GB",
+    "version": "v 0.9.5",
+    "date": "2026-03-12",
+    "desc": "《 几年前发布的虚拟、超现实MMORPG游戏，彻底改变技术世界。有了能重现五种感官的神经植入物，就无法区分游戏和现实世界。数以千计的服务器构成了永恒的网络：从色彩缤纷、充满魔力的奇幻世界到迷雾缭绕的科幻城市，没一个世界遥不可及。然而从表面上看，这个漂亮的外表有更黑暗的一面：黑市、用刑、强O、非常内容贩卖、非常集会……永恒遵循无人规则。出于某种原因，有关部门对此视而不见，没有监管，也没有控制。有人说这是因为游戏很容易上瘾，有人说这是因为市场每天波动数百万美元，有人说当权者应该被贿赂了，还有人说……还有其他事情正发生着。而你呢？你将在这个故事中扮演什么角色？",
+    "shots": [
+      "./images/shots/yhsj/yhsj01.webp",
+      "./images/shots/yhsj/yhsj02.webp",
+      "./images/shots/yhsj/yhsj03.webp",
+      "./images/shots/yhsj/yhsj04.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 251
+  },
+  {
+    "id": "ysjtc",
+    "title": "18 永恒世界 Eternum Ver0.9.5 官中 ",
+    "platform": "安卓 / 中文",
+    "cover": "./images/covers/ysjtc.webp",
+    "size": "3.9 GB",
+    "version": "v 0.9.5",
+    "date": "2026-03-12",
+    "desc": "大学刚毕业，你的生活并不顺利……没有工作，没有前景，然后……一辆卡车。是的，你死于卡车君的车祸。但你并没有在死亡中醒来，而是在 Evenralm 中醒来，这是一个充满魔法、怪物和冒险的奇幻世界，就像漫画或动漫一样。有了新的生命，你已经准备好追逐你最疯狂的梦想：成为后宫王，打倒魔王！一路上，你将聚集来自 Evenralm 各个角落的一群不同的令人惊叹的女性……人类、精灵、恶魔、龙等等，加入你的淫荡冒险。",
+    "shots": [
+      "./images/shots/ysjtc/ysjtc01.webp",
+      "./images/shots/ysjtc/ysjtc02.webp"
+    ],
+    "category": "安卓游戏 · 高评分…",
+    "tags": ["最新", "推荐"],
+    "status": "更新",
+    "statusColor": "#22c55e",
+    "views": 251
   }
 ]
