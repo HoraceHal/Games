@@ -1,52 +1,42 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>游戏目录 - 首页</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games 目录</title>
+  <meta name="color-scheme" content="dark" />
+  <!-- 使用相对路径，避免 GitHub Pages 根路径问题 -->
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <div class="brand" style="gap:12px">
-      <span class="logo"></span>
-      <span class="brand-name">Games 目录</span>
+  <header class="header" style="display:flex;align-items:center;gap:10px;padding:16px 16px 8px;">
+    <div style="width:14px;height:14px;border-radius:4px;background:#ff7a00;"></div>
+    <h1 style="margin:0;font-size:18px;font-weight:700;color:#eee;">Games 目录</h1>
+    <div style="margin-left:auto;display:flex;gap:8px;align-items:center;">
+      <label style="color:#aaa;font-size:12px;">每页：</label>
+      <select id="pageSize" style="background:#1a1a1a;color:#ddd;border:1px solid #333;border-radius:8px;padding:6px 10px;">
+        <option>12</option><option selected>24</option><option>48</option>
+      </select>
     </div>
-    <div class="actions">
-      <button id="themeToggle" class="toggle" aria-label="切换主题">🌙 夜间</button>
-    </div>
-  </div>
-  <div class="container">
-    <div class="filters">
-      <div class="search"><span class="icon">🔎</span><input id="q" type="search" placeholder="搜索名称…" /></div>
-      <button class="chip active" data-filter="all">全部</button>
-      <button class="chip" data-filter="推荐">推荐</button>
-      <button class="chip" data-filter="最新">最新</button>
-      <div class="sort">
-        <label style="color:var(--muted);font-size:13px">排序：</label>
-        <select id="sortSel"><option value="default">默认</option><option value="date">日期（新→旧）</option><option value="views">浏览量（高→低）</option></select>
-        <label style="color:var(--muted);font-size:13px;margin-left:8px">每页：</label>
-        <select id="pageSizeSel"><option>12</option><option>24</option><option>48</option></select>
-      </div>
-    </div>
-  </div>
-</header>
-<main class="container">
-  <section id="grid" class="grid"></section>
-  <div id="empty" class="empty" style="display:none">没有匹配的结果</div>
-  <div id="pager" class="pager" style="display:none">
-    <button id="prevBtn" class="btn">上一页</button>
-    <div id="pageNumbers" class="page-numbers"></div>
-    <button id="nextBtn" class="btn">下一页</button>
-  </div>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div><strong>声明：</strong>请不要在咸鱼平台上报游戏名称，可微信和QQ上交流，感谢老板的配合。</div>
-    <div class="wx">如需获取资源，请添加微信或者QQ：<strong>lyz7595,QQ:1754150684</strong></div>
-  </div>
-</footer>
-<script src="./js/app.js"></script>
+  </header>
+
+  <section style="padding:0 16px 8px;color:#aaa;font-size:12px;">
+    <div style="margin:6px 0;">声明：请不要在第三方平台上提前修改名称、可改昵称QQ上支付，谨遵老铁的配合。</div>
+    <div style="display:inline-block;background:#1fb86a;color:#fff;padding:6px 10px;border-radius:8px;">如需获取资源，请添加微信或QQ：lyz7595, QQ:1754150684</div>
+  </section>
+
+  <main class="container">
+    <div id="tagsBar" class="tags-bar"></div>
+    <section id="cards" class="grid"></section>
+    <div id="emptyState" class="empty" hidden>没有找到匹配的游戏</div>
+  </main>
+
+  <footer class="footer" style="text-align:center;color:#888;padding:16px 0 28px;">
+    © <span id="year"></span> Games 目录；联系微信lyz7595
+  </footer>
+
+  <script src="./js/app.patched.js"></script>
 </body>
 </html>
